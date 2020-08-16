@@ -3,8 +3,8 @@ BlitTris
 
 BlitTris is a Tetris-like game for the awesome 32blit handheld console.
 
-It's an evolution from my DragonRuby-based (dragontt)[https://ahnlak.itch.io/dragontt],
-which in turn was inspired (many decades removed!) by Mirk's (Tetris for Terminals)[https://github.com/MikeTaylor/tt]
+It's an evolution from my DragonRuby-based [dragontt](https://ahnlak.itch.io/dragontt),
+which in turn was inspired (many decades removed!) by Mirk's [Tetris for Terminals](https://github.com/MikeTaylor/tt)
 
 This is a more rounded game than `dragontt`, which was ultimately just a way
 of exploring the magnificent DragonRuby environment. Here, we can offer the
