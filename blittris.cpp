@@ -13,11 +13,15 @@
 
 #include "32blit.hpp"
 #include "blittris.hpp"
+#include "assets.hpp"
+#include "game.hpp"
 
 
 /* Functions. */
 
 using namespace blit;
+
+Game *g_game = NULL;
 
 /*
  * void init( void ) - called once when the game is launched.
@@ -27,7 +31,16 @@ void init( void )
     /* Make sure we're in hi-res, 320x240 mode. */
     set_screen_mode( ScreenMode::hires );
 
-    /* Yes, I know technically a return is not required, but it feels tidier. */
+    /* Load up the sprite sheet. */
+    screen.sprites = SpriteSheet::load( g_asset_sprites );
+
+    /* And initialise our font handling - the API doesn't support colour. */
+
+
+    /* For now, dive straight into the game. */
+    g_game = new Game();
+
+    /* All done. */
     return;
 }
 
@@ -40,7 +53,13 @@ void init( void )
 
 void update( uint32_t p_timestamp )
 {
-    /* Yes, I know technically a return is not required, but it feels tidier. */
+    /* For now, dive straight into the game. */
+    if ( NULL != g_game )
+    {
+        g_game->update( p_timestamp );
+    }
+
+    /* All done. */
     return;
 }
 
@@ -51,20 +70,15 @@ void update( uint32_t p_timestamp )
  * uint32_t - the time in milliseconds since the epoch
  */
 
-void render( uint32_t time )
+void render( uint32_t p_timestamp )
 {
-    // clear the screen -- screen is a reference to the frame buffer and can be used to draw all things with the 32blit
-    screen.clear();
-
-    // draw some text at the top of the screen
-    screen.alpha = 255;
-    screen.mask = nullptr;
-    screen.pen = Pen(255, 255, 255);
-    screen.rectangle(Rect(0, 0, 320, 14));
-    screen.pen = Pen(0, 0, 0);
-    screen.text("Hello BlitTris!", minimal_font, Point(5, 4));
-
-    /* Yes, I know technically a return is not required, but it feels tidier. */
+    /* For now, dive straight into the game. */
+    if ( NULL != g_game )
+    {
+        g_game->render( p_timestamp );
+    }
+    
+    /* All done. */
     return;
 }
 

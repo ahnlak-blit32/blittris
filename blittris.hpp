@@ -13,6 +13,17 @@
 
 /* Constants. */
 
+#define SPRITE_BLOCK_BASE         0
+#define SPRITE_BLOCK_MAX          15
+#define SPRITE_BOX_LEFT           16
+#define SPRITE_BOX_TOP            17
+#define SPRITE_BOX_RIGHT          18
+#define SPRITE_BOX_BOTTOM         19
+#define SPRITE_BOX_BOTTOM_LEFT    20
+#define SPRITE_BOX_TOP_LEFT       21
+#define SPRITE_BOX_TOP_RIGHT      22
+#define SPRITE_BOX_BOTTOM_RIGHT   23
+
 
 /* Structures. */
 
@@ -22,3 +33,5 @@
 
 
 #endif /* _BLITTRIS_HPP_ */
+
+/* End of file blittris.hpp */

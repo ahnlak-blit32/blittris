@@ -1,0 +1,5 @@
+assets.cpp:
+    assets/sprites.png:
+        name: g_asset_sprites
+    assets/font.png:
+        name: g_asset_font
