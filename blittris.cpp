@@ -34,7 +34,8 @@ void init( void )
     /* Load up the sprite sheet. */
     screen.sprites = SpriteSheet::load( g_asset_sprites );
 
-    /* And initialise our font handling - the API doesn't support colour. */
+    /* And initialise our font handling - the API doesn't support colour, */
+    /* so this all has to be done via a spritesheet and our own code.     */
 
 
     /* For now, dive straight into the game. */

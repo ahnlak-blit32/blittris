@@ -1,0 +1,10 @@
+title: blittris
+description: Tetris For Your Blit!
+author: ahnlak
+splash:
+  file: assets/tetris-splash.png
+icon:
+  file: assets/tetris-icon.png
+version: v0.0.1
+category: game
+url: https://github.com/ahnlak-blit32/blittris
